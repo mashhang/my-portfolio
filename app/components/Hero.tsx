@@ -6,9 +6,9 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen text-center px-4">
+    <section className="flex flex-col items-center justify-center h-[93vh] text-center px-4">
       <motion.h1
-        className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+        className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text p-4 bg-gradient-to-r from-purple-400 to-pink-600"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

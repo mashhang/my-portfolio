@@ -72,7 +72,7 @@ export default function Skills() {
   return (
     <section className="px-4 py-20 max-w-5xl mx-auto text-center" id="skills">
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-12"
+        className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r p-4 from-purple-400 to-pink-500 mb-12"
         {...fadeIn(0)}
       >
         My Skills

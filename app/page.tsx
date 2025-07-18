@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="bg-white text-gray-900 min-h-screen scroll-smooth">
       <Navbar />
-      <div className="pt-16">
+      <div className="dark:bg-[#0D1117]">
         <Hero />
         <About />
         <Skills />
