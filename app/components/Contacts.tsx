@@ -1,30 +1,117 @@
-export default function Contact() {
+// ContactSection.tsx
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Input } from "@/app/components/ui/Input";
+import { Textarea } from "@/app/components/ui/Textarea";
+import { Button } from "@/app/components/ui/Button";
+
+export default function ContactSection() {
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form Submitted", form);
+    // Add integration logic here
+  };
+
   return (
-    <section id="contact" className="max-w-4xl mx-auto px-4 py-20">
-      <h2 className="text-3xl font-bold mb-4">Contact</h2>
-      <p className="text-lg text-gray-700 mb-4">
-        Want to collaborate or hire me? Let’s talk!
-      </p>
-      <ul className="space-y-2">
-        <li>
-          <strong>Email:</strong> mashhang@example.com
-        </li>
-        <li>
-          <strong>GitHub:</strong>{" "}
-          <a
-            href="https://github.com/mashhang"
-            className="text-blue-600 hover:underline"
-          >
-            github.com/mashhang
-          </a>
-        </li>
-        <li>
-          <strong>LinkedIn:</strong>{" "}
-          <a href="#" className="text-blue-600 hover:underline">
-            (your link here)
-          </a>
-        </li>
-      </ul>
+    <section id="contact" className="py-20 px-4 max-w-6xl mx-auto">
+      <motion.h2
+        className="text-4xl font-bold text-center mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        Get in Touch
+      </motion.h2>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.1 }}
+      >
+        {/* Column 1: Info */}
+        <motion.div
+          className="space-y-4"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <h3 className="text-xl font-semibold">Contact Info</h3>
+          <p className="text-muted-foreground">
+            You can reach me anytime via email or through this form. Let’s build
+            something together.
+          </p>
+          <div>
+            <p className="text-sm text-muted-foreground">Email</p>
+            <p className="font-medium">yourname@example.com</p>
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground">Location</p>
+            <p className="font-medium">Manila, Philippines</p>
+          </div>
+        </motion.div>
+
+        {/* Column 2: Spacer for visual balance or quote */}
+        <motion.div
+          className="hidden md:flex flex-col justify-center items-center text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <blockquote className="italic text-muted-foreground max-w-[80%]">
+            "Design is not just what it looks like and feels like. Design is how
+            it works." – Steve Jobs
+          </blockquote>
+        </motion.div>
+
+        {/* Column 3: Form */}
+        <motion.form
+          onSubmit={handleSubmit}
+          className="space-y-4"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Input
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
+          <Input
+            name="email"
+            type="email"
+            placeholder="Your Email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+          <Textarea
+            name="message"
+            rows={4}
+            placeholder="Your Message"
+            value={form.message}
+            onChange={handleChange}
+            required
+          />
+          <Button type="submit" className="w-full">
+            Send Message
+          </Button>
+        </motion.form>
+      </motion.div>
     </section>
   );
 }

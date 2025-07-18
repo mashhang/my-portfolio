@@ -1,14 +1,30 @@
-export default function About() {
+// components/AboutMe.tsx
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function AboutMe() {
   return (
-    <section id="about" className="max-w-4xl mx-auto px-4 py-20">
-      <h2 className="text-3xl font-bold mb-4">About Me</h2>
-      <p className="text-lg text-gray-700 leading-relaxed">
-        I’m a passionate and curious computer science graduate with a strong
-        love for creating clean and functional web apps. My main stack includes
-        Next.js, Tailwind CSS, Prisma, and Supabase. Aside from coding, I enjoy
-        gaming, listening to music, and watching movies. I’m also always on the
-        lookout for ways to learn and grow as a developer.
-      </p>
+    <section className="px-4 py-16 max-w-4xl mx-auto text-center">
+      <motion.div
+        className="text-base md:text-lg text-gray-300 leading-relaxed"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <p>
+          I'm a passionate frontend developer with a knack for creating smooth
+          and interactive web experiences. My development journey started out of
+          curiosity and quickly grew into a deep love for building things that
+          look good and work even better.
+        </p>
+        <p className="mt-4">
+          Currently, I’m focused on leveling up my React and TypeScript game
+          while learning new design patterns and keeping up with UI/UX trends. I
+          enjoy collaborating on creative projects that push the boundaries of
+          what’s possible on the web.
+        </p>
+      </motion.div>
     </section>
   );
 }

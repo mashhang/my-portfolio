@@ -1,35 +1,65 @@
+// components/Hero.tsx
 "use client";
 
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="flex flex-col items-center justify-center text-center py-20 px-4 bg-gray-100"
-    >
-      <h1 className="text-4xl md:text-6xl font-bold mb-4">
-        Paul Edrel B. King
-      </h1>
-      <p className="text-xl md:text-2xl font-medium text-gray-600 mb-6">
-        Computer Science Graduate | Web Developer | Gamer 🎮
-      </p>
-      <div className="space-x-4">
+    <section className="flex flex-col items-center justify-center min-h-screen text-center px-4">
+      <motion.h1
+        className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Hi, I'm Paul Edrel King
+      </motion.h1>
+      <motion.p
+        className="mt-4 text-lg md:text-xl text-gray-400 max-w-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
+        I build elegant frontends & sleek user experiences with modern web tech.
+      </motion.p>
+      <motion.div
+        className="flex gap-6 mt-6 text-2xl text-gray-300"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9 }}
+      >
         <a
-          href="#projects"
-          className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition"
+          href="https://github.com/mashhang"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white hover:scale-110 transition"
         >
-          See My Projects
+          <FaGithub />
         </a>
         <a
-          href="#contact"
-          className="border border-black px-6 py-2 rounded-full hover:bg-gray-200 transition"
+          href="https://linkedin.com/in/your-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white hover:scale-110 transition"
         >
-          Contact Me
+          <FaLinkedin />
         </a>
-      </div>
-    </motion.section>
+        <a
+          href="mailto:your.email@example.com"
+          className="hover:text-white hover:scale-110 transition"
+        >
+          <FaEnvelope />
+        </a>
+      </motion.div>
+      <motion.div
+        className="mt-12 text-sm text-gray-500"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+      >
+        <span className="inline-block animate-bounce">▼</span>
+      </motion.div>
+    </section>
   );
 }
