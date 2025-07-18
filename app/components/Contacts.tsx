@@ -25,7 +25,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 px-4 max-w-6xl mx-auto">
       <motion.h2
-        className="text-4xl font-bold text-center mb-12"
+        className="text-4xl font-bold text-center mb-12 dark:text-gray-300"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -48,18 +48,24 @@ export default function ContactSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <h3 className="text-xl font-semibold">Contact Info</h3>
-          <p className="text-muted-foreground">
+          <h3 className="text-xl font-semibold dark:text-gray-300">
+            Contact Info
+          </h3>
+          <p className="text-gray-700 dark:text-gray-400">
             You can reach me anytime via email or through this form. Let’s build
             something together.
           </p>
           <div>
-            <p className="text-sm text-muted-foreground">Email</p>
-            <p className="font-medium">yourname@example.com</p>
+            <p className="text-sm text-black dark:text-gray-300">Email</p>
+            <p className="font-medium text-gray-700 dark:text-gray-400">
+              edrel610@gmail.com
+            </p>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground">Location</p>
-            <p className="font-medium">Manila, Philippines</p>
+            <p className="text-sm text-black dark:text-gray-300">Location</p>
+            <p className="font-medium text-gray-700 dark:text-gray-400">
+              Laguna, Philippines
+            </p>
           </div>
         </motion.div>
 
@@ -70,7 +76,7 @@ export default function ContactSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <blockquote className="italic text-muted-foreground max-w-[80%]">
+          <blockquote className="italic text-muted-foreground max-w-[80%] dark:text-gray-300">
             "Design is not just what it looks like and feels like. Design is how
             it works." – Steve Jobs
           </blockquote>
