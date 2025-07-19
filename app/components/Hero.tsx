@@ -33,7 +33,7 @@ export default function Hero() {
           href="https://github.com/mashhang"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white hover:scale-110 transition"
+          className="hover:text-gray-700 dark:hover:text-white hover:scale-110 transition"
         >
           <FaGithub />
         </a>
@@ -41,13 +41,13 @@ export default function Hero() {
           href="https://linkedin.com/in/your-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-white hover:scale-110 transition"
+          className="hover:text-gray-700 dark:hover:text-white hover:scale-110 transition"
         >
           <FaLinkedin />
         </a>
         <a
           href="mailto:your.email@example.com"
-          className="hover:text-white hover:scale-110 transition"
+          className="hover:text-gray-700 dark:hover:text-white hover:scale-110 transition"
         >
           <FaEnvelope />
         </a>

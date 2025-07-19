@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="contact" className="py-12 px-4 max-w-6xl mx-auto">
       <motion.h2
         className="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
         initial={{ opacity: 0, y: 40 }}

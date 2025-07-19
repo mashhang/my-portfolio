@@ -46,9 +46,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     >
       <div
         ref={modalRef}
-        className={`relative bg-zinc-900/80 border border-zinc-700 rounded-2xl shadow-lg p-6 w-full max-w-5xl max-h-[90vh] overflow-y-auto ${
-          isClosing ? "animate-fadeOut" : "animate-fadeIn"
-        }`}
+        className={`
+          relative rounded-2xl p-6 w-full max-w-5xl max-h-[90vh] overflow-y-auto
+          backdrop-blur-sm shadow-xl border 
+          bg-white/20 border-white/20 text-black 
+          dark:bg-white/5 dark:border-white/10 dark:text-white
+          transition-all duration-300
+          ${isClosing ? "animate-fadeOut" : "animate-fadeIn"}
+        `}
       >
         {/* Close Button */}
         <button

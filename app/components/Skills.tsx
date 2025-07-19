@@ -70,10 +70,12 @@ const fadeIn = (delay: number = 0) => ({
 
 export default function Skills() {
   return (
-    <section className="px-4 py-20 max-w-5xl mx-auto text-center" id="skills">
+    <section className="px-4 py-12 max-w-6xl mx-auto text-center" id="skills">
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r p-4 from-purple-400 to-pink-500 mb-8"
-        {...fadeIn(0)}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r p-2 from-purple-400 to-pink-500 mb-8 animate-fadeIn"
       >
         My Skills
       </motion.h2>
@@ -85,23 +87,22 @@ export default function Skills() {
             className="text-left"
             {...fadeIn(index * 0.3)}
           >
-            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-200">
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-700 dark:text-gray-200">
               {group.title}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               {group.skills.map((skill, i) => (
                 <motion.div
                   key={skill.name}
-                  className="flex items-center gap-3 p-4 bg-gray-800 hover:bg-gray-700 hover:shadow-lg rounded-xl text-gray-100 transition-transform duration-200 cursor-pointer"
-                  whileHover={{ scale: 1.1 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 10,
-                    duration: 0.6,
+                  whileHover={{
+                    scale: 1.1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 10,
+                    },
                   }}
+                  className="flex items-center gap-3 p-4 bg-gray-300 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-xl text-gray-800 dark:text-gray-100 shadow-sm"
                 >
                   <span className="text-xl">{skill.icon}</span>
                   <span className="text-sm md:text-base font-medium">

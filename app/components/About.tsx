@@ -6,10 +6,10 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="px-4 py-20 max-w-3xl mx-auto text-center md:text-left"
+      className="px-4 py-12 max-w-6xl mx-auto text-center md:text-left"
     >
       <motion.h2
-        className="text-3xl md:text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
+        className="text-3xl md:text-4xl text-center p-2 font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
