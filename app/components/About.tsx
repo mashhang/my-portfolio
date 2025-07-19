@@ -12,7 +12,6 @@ export default function AboutMe() {
         className="text-3xl md:text-4xl text-center p-2 font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         About Me

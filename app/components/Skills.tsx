@@ -75,7 +75,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r p-2 from-purple-400 to-pink-500 mb-8 animate-fadeIn"
+        className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r p-2 from-purple-400 to-pink-500 mb-8"
       >
         My Skills
       </motion.h2>
