@@ -92,10 +92,14 @@ export default function Skills() {
               {group.skills.map((skill, i) => (
                 <motion.div
                   key={skill.name}
-                  className="flex items-center gap-3 p-4 bg-gray-800 hover:bg-gray-700 transition rounded-xl text-gray-100"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.05 }}
+                  className="flex items-center gap-3 p-4 bg-gray-800 hover:bg-gray-700 hover:shadow-lg rounded-xl text-gray-100 transition-transform duration-200 cursor-pointer"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 10,
+                    duration: 0,
+                  }}
                 >
                   <span className="text-xl">{skill.icon}</span>
                   <span className="text-sm md:text-base font-medium">
