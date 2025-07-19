@@ -21,7 +21,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
       >
-        I build elegant frontends & sleek user experiences with modern web tech.
+        React on the front, Node on the back, performance all around.
       </motion.p>
       <motion.div
         className="flex gap-6 mt-6 text-2xl text-gray-300"
