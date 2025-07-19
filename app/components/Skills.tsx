@@ -94,11 +94,13 @@ export default function Skills() {
                   key={skill.name}
                   className="flex items-center gap-3 p-4 bg-gray-800 hover:bg-gray-700 hover:shadow-lg rounded-xl text-gray-100 transition-transform duration-200 cursor-pointer"
                   whileHover={{ scale: 1.1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{
                     type: "spring",
-                    stiffness: 400,
+                    stiffness: 300,
                     damping: 10,
-                    duration: 0,
+                    duration: 0.6,
                   }}
                 >
                   <span className="text-xl">{skill.icon}</span>

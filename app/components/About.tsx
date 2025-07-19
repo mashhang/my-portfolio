@@ -4,34 +4,45 @@ import { motion } from "framer-motion";
 
 export default function AboutMe() {
   return (
-    <section className="w-full bg-[#0d0d0d] dark:bg-[#1f242c] py-20 border-t border-neutral-800">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
-          About Me
-        </h2>
+    <section
+      id="about"
+      className="px-4 py-20 max-w-3xl mx-auto text-center md:text-left"
+    >
+      <motion.h2
+        className="text-3xl md:text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        About Me
+      </motion.h2>
 
-        <motion.div
-          className="text-base sm:text-lg text-neutral-400 leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <p>
-            I'm a passionate frontend developer with a knack for creating smooth
-            and interactive web experiences. My development journey started out
-            of curiosity and quickly grew into a deep love for building things
-            that look good and work even better.
-          </p>
+      <motion.p
+        className="text-gray-400 text-lg leading-relaxed mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
+        I'm a passionate frontend developer with a knack for creating smooth and
+        interactive web experiences. My journey started from curiosity and grew
+        into a deep love for crafting products that both look great and work
+        beautifully.
+      </motion.p>
 
-          <p className="mt-6">
-            Currently, I’m focused on leveling up my React and TypeScript game
-            while learning new design patterns and keeping up with UI/UX trends.
-            I enjoy collaborating on creative projects that push the boundaries
-            of what’s possible on the web.
-          </p>
-        </motion.div>
-      </div>
+      <motion.p
+        className="text-gray-400 text-lg leading-relaxed"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        These days, I’m leveling up my React & TypeScript skills, exploring new
+        design patterns, and staying on top of UI/UX trends. I love
+        collaborating on creative projects that push web boundaries and deliver
+        impactful experiences.
+      </motion.p>
     </section>
   );
 }
