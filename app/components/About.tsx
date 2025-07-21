@@ -24,10 +24,11 @@ export default function AboutMe() {
         viewport={{ once: true }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        I'm a passionate frontend developer with a knack for creating smooth and
-        interactive web experiences. My journey started from curiosity and grew
-        into a deep love for crafting products that both look great and work
-        beautifully.
+        I'm a full-stack developer passionate about building scalable web
+        applications and engaging digital experiences. From crafting clean and
+        responsive UIs to architecting efficient backend systems, I enjoy
+        working across the stack to turn ideas into functional, user-friendly
+        products.
       </motion.p>
 
       <motion.p
@@ -37,10 +38,10 @@ export default function AboutMe() {
         viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.6 }}
       >
-        These days, I’m leveling up my React & TypeScript skills, exploring new
-        design patterns, and staying on top of UI/UX trends. I love
-        collaborating on creative projects that push web boundaries and deliver
-        impactful experiences.
+        I primarily work with technologies like React, Next.js, TypeScript,
+        Node.js, and PostgreSQL. I'm always learning—currently diving deeper
+        into system design, cloud deployments, and refining my UI/UX instincts
+        to deliver impactful and maintainable software.
       </motion.p>
     </section>
   );
