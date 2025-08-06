@@ -25,15 +25,15 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 dark:bg-[#0D1117] dark:text-white sticky top-0 z-50">
+    <nav className="flex justify-between items-center px-20 py-4 dark:bg-[#0D1117] dark:text-white sticky top-0 z-50">
       <motion.a
         href="#"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-xl font-bold tracking-widest"
+        className="text-xl font-extralight tracking-widest"
       >
-        King
+        P. King
       </motion.a>
 
       <div className="flex items-center gap-4">

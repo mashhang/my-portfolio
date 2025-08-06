@@ -18,7 +18,12 @@ import {
   SiGit,
   SiGithub,
   SiPostgresql,
+  SiPostman,
+  SiDocker,
+  SiNodedotjs,
 } from "react-icons/si";
+
+import { VscVscode } from "react-icons/vsc";
 
 type SkillGroup = {
   title: string;
@@ -48,6 +53,7 @@ const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
     skills: [
+      { name: "Node.js", icon: <SiNodedotjs className="text-green-500" /> },
       { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
       { name: "Supabase", icon: <SiSupabase className="text-green-400" /> },
       { name: "Prisma", icon: <SiPrisma className="text-white" /> },
@@ -59,6 +65,9 @@ const skillGroups: SkillGroup[] = [
     skills: [
       { name: "Git", icon: <SiGit className="text-red-400" /> },
       { name: "GitHub", icon: <SiGithub className="text-white" /> },
+      { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
+      { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+      { name: "Docker", icon: <SiDocker className="text-blue-500" /> },
     ],
   },
 ];

@@ -30,7 +30,7 @@ export const projects = [
     title: "Math Learning Platform",
     description:
       "Adaptive web app for senior high students to study Gen Math with pre-assessment and visual feedback. Username: 1148-21 Password: Abakada1.",
-    image: "/images/learnings.png",
+    image: "/images/progress.png",
     carousel: [
       "/images/dashboard.png",
       "/images/dashboard-mb.png",
